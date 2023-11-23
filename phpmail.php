@@ -1,10 +1,10 @@
 <?php
-$to = "physicsboat@list.aalto.fi";
+$to = "mohammad.bagheri@oulu.fi";
 $subject = "Nonsensical Latin";
 
 // compose headers
-$headers = "From: hannu-pekka.komsa@aalto.fi\r\n";
-$headers .= "Reply-To: hannu-pekka.komsa@aalto.fi\r\n";
+$headers = "From: hannu-pekka.komsa@oulu.fi\r\n";
+$headers .= "Reply-To: hannu-pekka.komsa@oulu.fi\r\n";
 $headers .= "X-Mailer: PHP/".phpversion();
 
 // compose message
