@@ -313,11 +313,11 @@ $page_contents = $html_header;
 $page_contents .= '<h1>Registration</h1>';
 
 $page_contents .= '<p class="instructions">';
-$page_contents .= 'Please register to the workshop <b>Physics boat 2019</b> by filling the form below. Make sure to fill in all the <b>required fields</b>, shown in bold text.';
+$page_contents .= 'Please register to the workshop <b>Physics boat 2023</b> by filling the form below. Make sure to fill in all the <b>required fields</b>, shown in bold text.';
 $page_contents .= '</p><br />';
 
 $page_contents .= '<p class="instructions">';
-$page_contents .= 'The deadline for registration is <b>2019-03-29, the 29th of March 2019</b>.';
+$page_contents .= 'The deadline for registration is <b>2023-03-29, the 29th of March 2023</b>.';
 $page_contents .= '</p><br />';
 
 $page_contents .= '<p class="instructions">';
