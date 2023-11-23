@@ -343,14 +343,14 @@ if($check["message"] != ""){
 $sent_successfully = false;
 
 if($try_send){
-  //$official_sender = 'Arkady Krasheninnikov <arkady.krasheninnikov@aalto.fi>';
-  //$regmail_to = 'Adam Foster <adam.foster@aalto.fi>, Arkady Krasheninnikov <arkady.krasheninnikov@aalto.fi>, Peter Spijker <peter.spijker@aalto.fi>, Teemu Hynninen <teemu.hynninen@utu.fi>';
-  //$regmail_to = 'Peter Spijker <peter.spijker@aalto.fi>';
-  $official_sender = 'Physics Boat site <viestiphysics@aalto.fi>';
-  $regmail_to = 'Physics Boat Workshop <physicsboat@list.aalto.fi>';
-  //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@aalto.fi>';
+  //$official_sender = 'Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>';
+  //$regmail_to = 'Adam Foster <mohammad.bagheri@oulu.fi>, Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>, Peter Spijker <mohammad.bagheri@oulu.fi>, Teemu Hynninen <mohammad.bagheri@oulu.fi>';
+  //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
+  $official_sender = 'Physics Boat site <mohammad.bagheri@oulu.fi>';
+  $regmail_to = 'Physics Boat Workshop <mohammad.bagheri@oulu.fi>';
+  //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
-  $regmail_headers = 'From: Physics Boat site <viestiphysics@aalto.fi>';
+  $regmail_headers = 'From: Physics Boat site <mohammad.bagheri@oulu.fi>';
   $regmail_title = '[Boat2019] Registration by '.$given_names.' '.$surname;
 
   $regmail_contents = format_mail('given names',$given_names);
@@ -403,7 +403,7 @@ if($try_send){
 
   if($n_accs > 1){
     //$notemail_headers = 'From: '.$email;
-    $notemail_headers = 'From: Physics Boat site <viestiphysics@aalto.fi>';
+    $notemail_headers = 'From: Physics Boat site <mohammad.bagheri@oulu.fi>';
     $notemail_title = '[Boat2019] Notification on '.$given_names.' '.$surname;
     $notemail_contents = 'Notice! '.$given_names.' '.$surname.' registered '.$n_accs.' accompanying people. Contact for details!';
 
