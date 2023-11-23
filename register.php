@@ -1,5 +1,5 @@
 <?php 
-include("phpmail.php");
+//include("phpmail.php");
 //ini_set('display_errors', 'On');
 
 $html_header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
@@ -347,7 +347,7 @@ if($try_send){
   //$regmail_to = 'Adam Foster <mohammad.bagheri@oulu.fi>, Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>, Peter Spijker <mohammad.bagheri@oulu.fi>, Teemu Hynninen <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
   $official_sender = 'Physics Boat site <mohammad.bagheri@oulu.fi>';
-  $regmail_to = 'Physics Boat Workshop <mohammad.bagheri@oulu.fi>';
+  $regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
   $regmail_headers = 'From: Physics Boat site <mohammad.bagheri@oulu.fi>';
