@@ -1,4 +1,5 @@
 <?php
+phpinfo();
 $to = "mohammad.bagheri@oulu.fi";
 $subject = "Nonsensical Latin";
 
