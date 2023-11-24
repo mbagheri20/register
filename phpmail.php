@@ -1,17 +1,10 @@
 <?php
-$sender = 'haa@s2i-php-container-boat.rahtiapp.fi';
-$recipient = 'mohammad.bagheri@oulu.fi';
-
-$subject = "php mail test";
-$message = "php test message";
-$headers = 'From:' . $sender;
-
-if (mail($recipient, $subject, $message, $headers))
+if ( function_exists( 'mail' ) )
 {
-    echo "Message accepted";
+    echo 'mail() is available';
 }
 else
 {
-    echo "Error: Message not accepted";
+    echo 'mail() has been disabled';
 }
 ?>
