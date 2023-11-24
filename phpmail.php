@@ -1,6 +1,6 @@
 <?php 
 
-$email = "mohammad.bagheri@oulu.fi";
+$email = "mohammad.bagheri.fi@gmail.com";
 $subject =  "Email Test";
 $message = "this is a mail testing email function on server";
 
