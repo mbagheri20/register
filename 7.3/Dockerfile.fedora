@@ -39,7 +39,7 @@ LABEL summary="$SUMMARY" \
 ARG INSTALL_PKGS="php php-mysqlnd php-bcmath php-json \
                   php-gd php-intl php-ldap php-mbstring php-pdo \
                   php-process php-soap php-opcache php-xml \
-                  php-gmp php-pecl-apcu mod_ssl hostname"
+                  php-gmp php-pecl-apcu mod_ssl hostname sendmail"
 
 RUN yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS --nogpgcheck && \
     rpm -V $INSTALL_PKGS && \
