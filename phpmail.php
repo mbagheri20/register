@@ -1,12 +1,20 @@
-<?php 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
-$email = "mohammad.bagheri@oulu.fi";
-$subject =  "Email Test";
-$message = "this is a mail testing email function on server";
+<?php
+$to = "mohammad.bagheri@oulu.fi";
+$subject = "Nonsensical Latin";
 
+// compose headers
+$headers = "From: hannu-pekka.komsa@oulu.fi\r\n";
+$headers .= "Reply-To: hannu-pekka.komsa@oulu.fi\r\n";
+$headers .= "X-Mailer: PHP/".phpversion();
 
-mail($email, $subject, $message);
+// compose message
+$message = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
+$message .= " Nam iaculis pede ac quam. Etiam placerat suscipit nulla.";
+$message .= " Maecenas id mauris eget tortor facilisis egestas.";
+$message .= " Praesent ac augue sed enim aliquam auctor. Ut dignissim ultricies est.";
+$message .= " Pellentesque convallis tempor tortor. Nullam nec purus.";
+$message = wordwrap($message, 70);
 
+// send email
+mail($to, $subject, $message, $headers);
 ?>
