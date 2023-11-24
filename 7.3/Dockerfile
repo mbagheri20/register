@@ -72,6 +72,10 @@ COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 # Copy extra files to the image.
 COPY ./root/ /
 
+RUN sed -i -e "s#;sendmail_path =#sendmail_path = /usr/sbin/sendmail -t -i#g"  \
+    /etc/opt/rh/rh-php73/php.ini/php.ini
+COPY sendmail_config.sh .
+
 # Reset permissions of filesystem to default values
 RUN /usr/libexec/container-setup && rpm-file-permissions
 
