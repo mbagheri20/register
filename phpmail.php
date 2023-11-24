@@ -1,22 +1,17 @@
 <?php
-//phpinfo();
-ini_set('display_errors', 'On');
-$to = "mohammad.bagheri@oulu.fi";
-$subject = "Nonsensical Latin";
+$sender = 'hannu-pekka.komsa@oulu.fi';
+$recipient = 'mohammad.bagheri@oulu.fi';
 
-// compose headers
-$headers = "From: hannu-pekka.komsa@oulu.fi\r\n";
-$headers .= "Reply-To: hannu-pekka.komsa@oulu.fi\r\n";
-$headers .= "X-Mailer: PHP/".phpversion();
+$subject = "php mail test";
+$message = "php test message";
+$headers = 'From:' . $sender;
 
-// compose message
-$message = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
-$message .= " Nam iaculis pede ac quam. Etiam placerat suscipit nulla.";
-$message .= " Maecenas id mauris eget tortor facilisis egestas.";
-$message .= " Praesent ac augue sed enim aliquam auctor. Ut dignissim ultricies est.";
-$message .= " Pellentesque convallis tempor tortor. Nullam nec purus.";
-$message = wordwrap($message, 70);
-
-// send email
-mail($to, $subject, $message, $headers);
+if (mail($recipient, $subject, $message, $headers))
+{
+    echo "Message accepted";
+}
+else
+{
+    echo "Error: Message not accepted";
+}
 ?>
