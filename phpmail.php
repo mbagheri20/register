@@ -1,5 +1,6 @@
 <?php
-phpinfo();
+//phpinfo();
+ini_set('display_errors', 'On');
 $to = "mohammad.bagheri@oulu.fi";
 $subject = "Nonsensical Latin";
 
