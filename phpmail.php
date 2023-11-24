@@ -1,10 +1,18 @@
-<?php
-if ( function_exists( 'mail' ) )
+<?php 
+
+$email = "mohammad.bagheri@oulu.fi";
+$subject =  "Email Test";
+$message = "this is a mail testing email function on server";
+
+
+$sendMail = mail($email, $subject, $message);
+if($sendMail)
 {
-    echo 'mail() is available';
+echo "Email Sent Successfully";
 }
 else
+
 {
-    echo 'mail() has been disabled';
+echo "Mail Failed";
 }
 ?>
