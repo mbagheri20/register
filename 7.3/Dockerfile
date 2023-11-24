@@ -48,6 +48,7 @@ ARG INSTALL_PKGS="rh-php73 rh-php73-php rh-php73-php-mysqlnd rh-php73-php-pgsql 
 
 RUN yum install -y centos-release-scl && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS --nogpgcheck && \
+    yum install -y sendmail && \
     rpm -V $INSTALL_PKGS && \
     yum -y clean all --enablerepo='*'
 
