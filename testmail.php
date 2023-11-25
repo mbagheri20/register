@@ -28,13 +28,13 @@ try {
 
     //Recipients
     $mail->setFrom('mohammad.bagheri@oulu.fi', 'Mailer');
-    $mail->addAddress('mohammad.bagheri.fi@gmail.com', 'Joe User');     //Add a recipient
+    $mail->addAddress('mohammad.bagheri@student.oulu.fi', 'Joe User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This issdsdsdsdsdsd the HTML message body <b>in bold!</b>';
+    $mail->Body    = 'This is the test HTML message body for php <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
