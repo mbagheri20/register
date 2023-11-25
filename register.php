@@ -12,7 +12,7 @@ require '/opt/app-root/src/PHPMailer-master/src/SMTP.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
-    //Server settings
+//Server settings
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 $mail->isSMTP();
 $mail->Host = 'smtp.pouta.csc.fi';
@@ -417,10 +417,7 @@ if($try_send){
 			    $regmail_title,
 			    $regmail_contents,
 			    $regmail_headers );
-  $mail->send($regmail_to, 
-			    $regmail_title,
-			    $regmail_contents,
-			    $regmail_headers);
+
 
   if($n_accs > 1){
     //$notemail_headers = 'From: '.$email;
