@@ -1,6 +1,24 @@
 <?php 
 //include("phpmail.php");
 //ini_set('display_errors', 'On');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require '/opt/app-root/src/PHPMailer-master/src/Exception.php';
+require '/opt/app-root/src/PHPMailer-master/src/PHPMailer.php';
+require '/opt/app-root/src/PHPMailer-master/src/SMTP.php';
+
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+    //Server settings
+$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+$mail->isSMTP();
+$mail->Host = 'smtp.pouta.csc.fi';
+$mail->SMTPAuth = false;
+$mail->SMTPAutoTLS = false; 
+$mail->Port = 25; 
 
 $html_header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
 $html_header .= '<html xmlns="http://www.w3.org/1999/xhtml">';
