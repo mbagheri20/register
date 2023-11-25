@@ -417,7 +417,10 @@ if($try_send){
 			    $regmail_title,
 			    $regmail_contents,
 			    $regmail_headers );
-  $mail->send();
+  $mail->send($regmail_to, 
+			    $regmail_title,
+			    $regmail_contents,
+			    $regmail_headers);
 
   if($n_accs > 1){
     //$notemail_headers = 'From: '.$email;
