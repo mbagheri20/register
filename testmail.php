@@ -15,7 +15,7 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
-    $mail->Host = 'localhost';
+    $mail->Host = 'smtp.pouta.csc.fi';
     $mail->SMTPAuth = false;
     $mail->SMTPAutoTLS = false; 
     $mail->Port = 25; 
