@@ -1,6 +1,6 @@
 <?php 
 //include("phpmail.php");
-//ini_set('display_errors', 'On');
+ini_set('display_errors', 'On');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -417,7 +417,7 @@ if($try_send){
 			    $regmail_title,
 			    $regmail_contents,
 			    $regmail_headers );
-
+  $mail->send();
 
   if($n_accs > 1){
     //$notemail_headers = 'From: '.$email;
