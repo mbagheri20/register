@@ -14,11 +14,17 @@ $mail = new PHPMailer(true);
 try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.pouta.csc.fi';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = false;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->isSMTP();
+    $mail->Host = 'localhost';
+    $mail->SMTPAuth = false;
+    $mail->SMTPAutoTLS = false; 
+    $mail->Port = 25; 
+    
+    //$mail->isSMTP();                                            //Send using SMTP
+    //$mail->Host       = 'smtp.pouta.csc.fi';                     //Set the SMTP server to send through
+    //$mail->SMTPAuth   = false;
+    //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    //$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('mohammad.bagheri@oulu.fi', 'Mailer');
