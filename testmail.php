@@ -27,14 +27,14 @@ try {
     //$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('mohammad.bagheri@oulu.fi', 'Mailer');
-    $mail->addAddress('mohammad.bagheri@student.oulu.fi', 'Joe User');     //Add a recipient
+    $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat');
+    $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'admin User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the test HTML message body for php <b>in bold!</b>';
+    $mail->Subject = 'Physics boat mailer';
+    $mail->Body    = 'Hi, If you received this email, it means the PHP mail fixed!';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
