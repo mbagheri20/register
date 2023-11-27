@@ -1,3 +1,7 @@
+*PHP mailer added
+Install using teminal:
+oc new-app php:7.3~https://github.com/mbagheri20/s2i-php-container.git
+
 PHP Docker images
 =================
 
