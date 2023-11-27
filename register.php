@@ -13,7 +13,7 @@ require '/opt/app-root/src/PHPMailer-master/src/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 //Server settings
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+//$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 $mail->isSMTP();
 $mail->Host = 'smtp.pouta.csc.fi';
 $mail->SMTPAuth = false;
@@ -538,7 +538,7 @@ Hannu-Pekka Komsa
   //$sent_confirm = mail($confmail_to,$confmail_title,$confmail_contents,$confmail_headers );
   $mail2 = new PHPMailer(true);
   //Server settings
-  $mail2->SMTPDebug = SMTP::DEBUG_SERVER;
+  //$mail2->SMTPDebug = SMTP::DEBUG_SERVER;
   $mail2->isSMTP();
   $mail2->Host = 'smtp.pouta.csc.fi';
   $mail2->SMTPAuth = false;
