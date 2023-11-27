@@ -541,6 +541,7 @@ Hannu-Pekka Komsa
   $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
   $mail->addAddress($email, 'applicant');	
   $mail->Subject = $confmail_title;
+  $confmail_contents = nl2br($confmail_contents);
   $mail->Body    = $confmail_contents;
   $sent_confirm = $mail->send();	
 
