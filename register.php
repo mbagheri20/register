@@ -427,7 +427,7 @@ if($try_send){
   }
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
-  $mail->Body    = $regmail_contents;
+  $mail->Body    = nl2br($regmail_contents);
   $sent_successfully = $mail->send();
 	
 
@@ -541,8 +541,7 @@ Hannu-Pekka Komsa
   $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
   $mail->addAddress($email, 'applicant');	
   $mail->Subject = $confmail_title;
-  $confmail_contents = nl2br($confmail_contents);
-  $mail->Body    = $confmail_contents;
+  $mail->Body    = nl2br($confmail_contents);
   $sent_confirm = $mail->send();	
 
 }
