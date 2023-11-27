@@ -25,8 +25,8 @@ $html_header .= '<html xmlns="http://www.w3.org/1999/xhtml">';
 $html_header .= '<head>';
 $html_header .= '<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />';
 $html_header .= '<title>Registration</title>';
-$html_header .= '<link rel="shortcut icon" href="http://physics.aalto.fi/pub/boat/figs/aalto_icon.png" type="image/png" />';
-$html_header .= '<link rel="icon" href="http://physics.aalto.fi/pub/boat/figs/aalto_icon.png" type="image/png" />';
+//$html_header .= '<link rel="shortcut icon" href="http://physics.aalto.fi/pub/boat/figs/aalto_icon.png" type="image/png" />';
+//$html_header .= '<link rel="icon" href="http://physics.aalto.fi/pub/boat/figs/aalto_icon.png" type="image/png" />';
 $html_header .= '<link rel="stylesheet" href="form.css" type="text/css" />';
 $html_header .= '<style type="text/css"></style>';
 $html_header .= '<script type="text/x-mathjax-config">
@@ -371,7 +371,8 @@ if($try_send){
   $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
-  $mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
+  //$mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
+  $mail->addBCC('mohammad.bagheri@student.oulu.fi','Physics Boat Workshop');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
