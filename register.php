@@ -428,7 +428,7 @@ if($try_send){
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
   $sent_successfully = $mail->send();
-  $mail->send();	
+	
 
   if($n_accs > 1){
     //$notemail_headers = 'From: '.$email;
