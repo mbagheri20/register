@@ -366,13 +366,13 @@ if($try_send){
   //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
   $mail->isHTML(true);
 	
-  //$official_sender = 'Physics Boat site <mohammad.bagheri@oulu.fi>';
-  $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat site');
-  $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
+  //$official_sender = 'Physics Boat site <@>';
+  $mail->setFrom('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
+  $mail->addReplyTo('hannu-pekka.koms@oulu.fi', 'Physics Boat Workshop');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
-  $mail->addBCC('mohammad.bagheri@student.oulu.fi','Physics Boat Workshop');
+  $mail->addBCC('mohammad.bagheri@oulu.fi','Physics Boat Workshop');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
@@ -536,13 +536,21 @@ Hannu-Pekka Komsa
 ';
 
   //$sent_confirm = mail($confmail_to,$confmail_title,$confmail_contents,$confmail_headers );
-  $mail->isHTML(true);
-  $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat site');
-  $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
-  $mail->addAddress($email, 'applicant');	
-  $mail->Subject = $confmail_title;
-  $mail->Body    = nl2br($confmail_contents);
-  $sent_confirm = $mail->send();	
+  $mail2 = new PHPMailer(true);
+  //Server settings
+  $mail2->SMTPDebug = SMTP::DEBUG_SERVER;
+  $mail2->isSMTP();
+  $mail2->Host = 'smtp.pouta.csc.fi';
+  $mail2->SMTPAuth = false;
+  $mail2->SMTPAutoTLS = false;
+  $mail2->Port = 25;	
+  $mail2->isHTML(true);
+  $mail2->setFrom('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
+  $mail2->addReplyTo('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
+  $mail2->addAddress($email, 'applicant');	
+  $mail2->Subject = $confmail_title;
+  $mail2->Body    = nl2br($confmail_contents);
+  $sent_confirm = $mail2->send();	
 
 }
 
