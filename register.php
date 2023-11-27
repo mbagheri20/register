@@ -853,7 +853,8 @@ if($preview || $sent_successfully){
 
   if($check["ok"]){
     if($sent_successfully){
-      $page_contents .= '<p class=info><a href="http://physics.aalto.fi/pub/boat/">back to main page</a></p>';
+      $mail->send();    
+      $page_contents .= '<p class=info><a href="https://physics-boat.rahtiapp.fi/">back to main page</a></p>';
     } else {
       $page_contents .= '<table><tbody><tr><td><input type="submit" value="preview" name="action"><input type="submit" value="send" name="action"></td></tr></tbody></table>';
     }
