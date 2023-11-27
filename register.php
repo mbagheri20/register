@@ -535,10 +535,14 @@ Arkady Krasheninnikov
 Hannu-Pekka Komsa
 ';
 
-  $sent_confirm = mail($confmail_to,
-		       $confmail_title,
-		       $confmail_contents,
-		       $confmail_headers );
+  //$sent_confirm = mail($confmail_to,$confmail_title,$confmail_contents,$confmail_headers );
+  $mail->isHTML(true);
+  $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat site');
+  $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
+  $mail->addAddress($email, 'applicant');	
+  $mail->Subject = $confmail_title;
+  $mail->Body    = $confmail_contents;
+  $sent_confirm = $mail->send();	
 
 }
 
