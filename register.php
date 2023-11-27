@@ -1,6 +1,6 @@
 <?php
 //include("phpmail.php");
-ini_set('display_errors', 'On');
+//ini_set('display_errors', 'On');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
