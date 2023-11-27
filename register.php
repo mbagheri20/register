@@ -364,7 +364,8 @@ if($try_send){
   //$official_sender = 'Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Adam Foster <mohammad.bagheri@oulu.fi>, Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>, Peter Spijker <mohammad.bagheri@oulu.fi>, Teemu Hynninen <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
-
+  $mail->isHTML(true);
+	
   //$official_sender = 'Physics Boat site <mohammad.bagheri@oulu.fi>';
   $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat site');
   $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
@@ -376,7 +377,7 @@ if($try_send){
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
 
   //$regmail_headers = 'From: Physics Boat site <mohammad.bagheri@oulu.fi>';
-  $mail->addCustomHeader('From: Physics Boat site', 'mohammad.bagheri@oulu.fi');
+  //$mail->addCustomHeader('From: Physics Boat site', 'mohammad.bagheri@oulu.fi');
 
   //$regmail_title = '[Boat2019] Registration by '.$given_names.' '.$surname;
   $mail->Subject = '[Boat2024] Registration by '.$given_names.' '.$surname;
@@ -426,7 +427,7 @@ if($try_send){
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
   $sent_successfully = $mail->send();
-
+  $mail->send();	
 
   if($n_accs > 1){
     //$notemail_headers = 'From: '.$email;
@@ -852,8 +853,7 @@ if($preview || $sent_successfully){
   $page_contents .= '</p>';
 
   if($check["ok"]){
-    if($sent_successfully){
-      $mail->send();    
+    if($sent_successfully){  
       $page_contents .= '<p class=info><a href="https://physics-boat.rahtiapp.fi/">back to main page</a></p>';
     } else {
       $page_contents .= '<table><tbody><tr><td><input type="submit" value="preview" name="action"><input type="submit" value="send" name="action"></td></tr></tbody></table>';
