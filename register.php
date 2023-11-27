@@ -383,50 +383,51 @@ if($try_send){
   //$regmail_title = '[Boat2019] Registration by '.$given_names.' '.$surname;
   $mail->Subject = '[Boat2024] Registration by '.$given_names.' '.$surname;
 
-//From here  all the $regmail_contents  changed to $mail->Body    =
-  $mail->Body    = format_mail('given names',$given_names);
-  $mail->Body    .= format_mail('surname',$surname);
-  $mail->Body    .= format_mail('affiliation',$affiliation);
-  $mail->Body    .= format_mail('address',$address);
-  $mail->Body    .= format_mail('country',$country);
-  $mail->Body    .= format_mail('email',$email);
-  $mail->Body    .= format_mail('position',$position);
-  $mail->Body    .= format_mail('gender',$gender);
-  $mail->Body    .= format_mail('day of birth',$day);
-  $mail->Body    .= format_mail('month of birth',$month);
-  $mail->Body    .= format_mail('year of birth',$year);
-  $mail->Body    .= format_mail('accommodation',$accommodation);
-  $mail->Body    .= format_mail('roommate',$roommate);
-  $mail->Body    .= format_mail('misc info',$misc);
-  $mail->Body    .= format_mail('number of guests',$n_accs);
+
+  $regmail_contents    = format_mail('given names',$given_names);
+  $regmail_contents   .= format_mail('surname',$surname);
+  $regmail_contents   .= format_mail('affiliation',$affiliation);
+  $regmail_contents   .= format_mail('address',$address);
+  $regmail_contents   .= format_mail('country',$country);
+  $regmail_contents   .= format_mail('email',$email);
+  $regmail_contents   .= format_mail('position',$position);
+  $regmail_contents   .= format_mail('gender',$gender);
+  $regmail_contents   .= format_mail('day of birth',$day);
+  $regmail_contents   .= format_mail('month of birth',$month);
+  $regmail_contents   .= format_mail('year of birth',$year);
+  $regmail_contents   .= format_mail('accommodation',$accommodation);
+  $regmail_contents   .= format_mail('roommate',$roommate);
+  $regmail_contents   .= format_mail('misc info',$misc);
+  $regmail_contents   .= format_mail('number of guests',$n_accs);
   for ($i = 0; $i < $n_accs; $i++){
-    $mail->Body    .= format_mail('guest '.($i+1).' given name',$accompanyings['gnames'][$i]);
-    $mail->Body    .= format_mail('guest '.($i+1).' surname',$accompanyings['snames'][$i]);
-    $mail->Body    .= format_mail('guest '.($i+1).' birthday',$accompanyings['dobs'][$i]);
+    $regmail_contents   .= format_mail('guest '.($i+1).' given name',$accompanyings['gnames'][$i]);
+    $regmail_contents   .= format_mail('guest '.($i+1).' surname',$accompanyings['snames'][$i]);
+    $regmail_contents   .= format_mail('guest '.($i+1).' birthday',$accompanyings['dobs'][$i]);
   }
-  $mail->Body    .= format_mail('type',$type);
-  $mail->Body    .= format_mail('title',$title);
-  $mail->Body    .= format_mail('number of authors',$n_authors);
+  $regmail_contents   .= format_mail('type',$type);
+  $regmail_contents   .= format_mail('title',$title);
+  $regmail_contents   .= format_mail('number of authors',$n_authors);
   for ($i = 0; $i < $n_authors; $i++){
-    $mail->Body    .= format_mail('author '.($i+1).' initials',$authors['initials'][$i]);
-    $mail->Body    .= format_mail('author '.($i+1).' name',$authors['names'][$i]);
-    $mail->Body    .= format_mail('author '.($i+1).' affiliation',$authors['affs'][$i]);
+    $regmail_contents   .= format_mail('author '.($i+1).' initials',$authors['initials'][$i]);
+    $regmail_contents   .= format_mail('author '.($i+1).' name',$authors['names'][$i]);
+    $regmail_contents   .= format_mail('author '.($i+1).' affiliation',$authors['affs'][$i]);
   }
-  $mail->Body    .= format_mail('number of affiliations',$n_affs);
+  $regmail_contents   .= format_mail('number of affiliations',$n_affs);
   for ($i = 0; $i < $n_affs; $i++){
-    $mail->Body    .= format_mail('affiliation '.($i+1),$affiliations[$i]);
+    $regmail_contents   .= format_mail('affiliation '.($i+1),$affiliations[$i]);
   }
-  $mail->Body    .= format_mail('abstract',$abstract);
-  $mail->Body    .= format_mail('number of references',$n_refs);
+  $regmail_contents   .= format_mail('abstract',$abstract);
+  $regmail_contents   .= format_mail('number of references',$n_refs);
   for ($i = 0; $i < $n_refs; $i++){
-    $mail->Body    .= format_mail('reference '.($i+1).' authors',$references['authors'][$i]);
-    $mail->Body    .= format_mail('reference '.($i+1).' journal',$references['journal'][$i]);
-    $mail->Body    .= format_mail('reference '.($i+1).' volume',$references['volume'][$i]);
-    $mail->Body    .= format_mail('reference '.($i+1).' year',$references['year'][$i]);
-    $mail->Body    .= format_mail('reference '.($i+1).' page',$references['page'][$i]);
+    $regmail_contents   .= format_mail('reference '.($i+1).' authors',$references['authors'][$i]);
+    $regmail_contents   .= format_mail('reference '.($i+1).' journal',$references['journal'][$i]);
+    $regmail_contents   .= format_mail('reference '.($i+1).' volume',$references['volume'][$i]);
+    $regmail_contents   .= format_mail('reference '.($i+1).' year',$references['year'][$i]);
+    $regmail_contents   .= format_mail('reference '.($i+1).' page',$references['page'][$i]);
   }
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
+  $mail->Body    = $regmail_contents;
   $sent_successfully = $mail->send();
 	
 
