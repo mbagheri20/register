@@ -372,7 +372,7 @@ if($try_send){
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
-  //$mail->addBCC('mohammad.bagheri@oulu.fi','Physics Boat Workshop');
+  $mail->addBCC('mohammad.bagheri@oulu.fi','Physics Boat Workshop');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
@@ -428,7 +428,7 @@ if($try_send){
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
   //$mail->Body    = nl2br($regmail_contents);
-  $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
+  //$mail->addAddress('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
   $mail->Body    = $regmail_contents;
   $sent_successfully = $mail->send();
 	
@@ -439,7 +439,7 @@ if($try_send){
     $notemail_title = '[Boat2024] Notification on '.$given_names.' '.$surname;
     $notemail_contents = 'Notice! '.$given_names.' '.$surname.' registered '.$n_accs.' accompanying people. Contact for details!';
 
-    //$sent_notice = mail($regmail_to, $notemail_title, $notemail_contents, $notemail_headers );
+    //$sent_notice = mail($regmail_to, $notemail_title, $notemail_contents, $notemail_headers);
   }
 
   $prefix = "";
