@@ -361,18 +361,18 @@ if($check["message"] != ""){
 $sent_successfully = false;
 
 if($try_send){
-  //$official_sender = 'Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>';
+  $official_sender = 'Hannu-Pekka Komsa <hannu-pekka.komsa@oulu.fi>';
   //$regmail_to = 'Adam Foster <mohammad.bagheri@oulu.fi>, Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>, Peter Spijker <mohammad.bagheri@oulu.fi>, Teemu Hynninen <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
-  $mail->isHTML(true);
+  //$mail->isHTML(true);
 	
   //$official_sender = 'Physics Boat site <@>';
   $mail->setFrom('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
-  $mail->addReplyTo('hannu-pekka.koms@oulu.fi', 'Physics Boat Workshop');
+  $mail->addReplyTo('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
-  $mail->addBCC('mohammad.bagheri@oulu.fi','Physics Boat Workshop');
+  //$mail->addBCC('mohammad.bagheri@oulu.fi','Physics Boat Workshop');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
@@ -427,7 +427,8 @@ if($try_send){
   }
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
-  $mail->Body    = nl2br($regmail_contents);
+  //$mail->Body    = nl2br($regmail_contents);
+  $mail->Body    = $regmail_contents;
   $sent_successfully = $mail->send();
 	
 
@@ -533,6 +534,7 @@ Physics Boat Workshop organizers
 --------------------------------
 Arkady Krasheninnikov
 Hannu-Pekka Komsa
+Harriet Åhlgren
 ';
 
   //$sent_confirm = mail($confmail_to,$confmail_title,$confmail_contents,$confmail_headers );
