@@ -368,7 +368,7 @@ if($try_send){
 	
   //$official_sender = 'Physics Boat site <@>';
   $mail->setFrom('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
-  $mail->addReplyTo('hannu-pekka.koms@oulu.fi', 'Physics Boat Workshop');
+  $mail->addReplyTo('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
