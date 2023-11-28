@@ -28,10 +28,18 @@ try {
 
     //Recipients
     $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat');
-    $mail->addAddress('mbagheri93@yahoo.com', 'admin User');     //Add a recipient
+    $mail->addAddress('clashsave92@gmail.com', 'admin User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
+    $mail->SMTPSecure = 'ssl';
+    $mail->From = 'From Email Address';
+    $mail->FromName = "Any Name";
+    //$mail->AddReplyTo('xyz@domainname.com', 'any name'); 
+    //$mail->AddAddress($to['email'],$to['name']);
+    $mail->Priority = 1;
+    $mail->AddCustomHeader("X-MSMail-Priority: High");
+    $mail->WordWrap = 50; 
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'first project report Nov';
     $mail->Body    = 'Hi, If you received this email, it means the PHP mail fixed!';
