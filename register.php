@@ -428,6 +428,7 @@ if($try_send){
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
   //$mail->Body    = nl2br($regmail_contents);
+  $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'User');
   $mail->Body    = $regmail_contents;
   $sent_successfully = $mail->send();
 	
