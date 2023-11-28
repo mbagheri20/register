@@ -372,7 +372,8 @@ if($try_send){
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
-  $mail->addBCC('mohammad.bagheri@oulu.fi','Physics Boat Workshop');
+  //$mail->addBCC('mohammad.bagheri@oulu.fi','Physics Boat Workshop');
+  $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'abstract submission');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$regmail_headers = 'From: '.$given_names.' '.$surname.' <'.$email.'>';
