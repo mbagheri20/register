@@ -28,12 +28,12 @@ try {
 
     //Recipients
     $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat');
-    $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'admin User');     //Add a recipient
+    $mail->addAddress('clashsave92@gmail.com', 'admin User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Physics boat mailer';
+    $mail->Subject = 'first project report Nov';
     $mail->Body    = 'Hi, If you received this email, it means the PHP mail fixed!';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
