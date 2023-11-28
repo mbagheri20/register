@@ -13,7 +13,7 @@ require '/opt/app-root/src/PHPMailer-master/src/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 //Server settings
-//$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 $mail->isSMTP();
 $mail->Host = 'smtp.pouta.csc.fi';
 $mail->SMTPAuth = false;
@@ -364,7 +364,7 @@ if($try_send){
   //$official_sender = 'Hannu-Pekka Komsa <hannu-pekka.komsa@oulu.fi>';
   //$regmail_to = 'Adam Foster <mohammad.bagheri@oulu.fi>, Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>, Peter Spijker <mohammad.bagheri@oulu.fi>, Teemu Hynninen <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
-  //$mail->isHTML(true);
+  $mail->isHTML(true);
 	
   //$official_sender = 'Physics Boat site <@>';
   $mail->setFrom('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
@@ -428,7 +428,7 @@ if($try_send){
 
   //$sent_successfully = mail($regmail_to, $regmail_title, $regmail_contents,$regmail_headers );
   //$mail->Body    = nl2br($regmail_contents);
-  $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'User');
+  $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
   $mail->Body    = $regmail_contents;
   $sent_successfully = $mail->send();
 	
@@ -439,10 +439,7 @@ if($try_send){
     $notemail_title = '[Boat2024] Notification on '.$given_names.' '.$surname;
     $notemail_contents = 'Notice! '.$given_names.' '.$surname.' registered '.$n_accs.' accompanying people. Contact for details!';
 
-    $sent_notice = mail($regmail_to,
-			$notemail_title,
-			$notemail_contents,
-			$notemail_headers );
+    //$sent_notice = mail($regmail_to, $notemail_title, $notemail_contents, $notemail_headers );
   }
 
   $prefix = "";
