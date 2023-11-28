@@ -27,20 +27,20 @@ try {
     //$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->Sender='mohammad.bagheri@oulu.fi';
-    $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat');
+    //$mail->Sender='mohammad.bagheri@oulu.fi';
+    $mail->setFrom('info@register-boat.rahtiapp.fi', 'Physics Boat');
     $mail->addAddress('clashsave92@gmail.com', 'admin User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
     //$mail->SMTPSecure = 'tls';
     //$mail->From = 'mohammad.bagheri@oulu.fi';
-    $mail->FromName = "Any Name";
+    //$mail->FromName = "Any Name";
     //$mail->AddReplyTo('xyz@domainname.com', 'any name'); 
     //$mail->AddAddress($to['email'],$to['name']);
-    $mail->Priority = 1;
-    $mail->AddCustomHeader("X-MSMail-Priority: High");
-    $mail->WordWrap = 50; 
+    //$mail->Priority = 1;
+    //$mail->AddCustomHeader("X-MSMail-Priority: High");
+    //$mail->WordWrap = 50; 
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'first project report Nov';
     $mail->Body    = 'Hi, If you received this email, it means the PHP mail fixed!';
