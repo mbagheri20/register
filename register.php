@@ -533,6 +533,7 @@ Physics Boat Workshop organizers
 --------------------------------
 Arkady Krasheninnikov
 Hannu-Pekka Komsa
+Harriet Ahlgren
 ';
 
   //$sent_confirm = mail($confmail_to,$confmail_title,$confmail_contents,$confmail_headers );
