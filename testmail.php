@@ -32,7 +32,7 @@ try {
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
-    //$mail->SMTPSecure = 'ssl';
+    $mail->SMTPSecure = 'tls';
     //$mail->From = 'mohammad.bagheri@oulu.fi';
     $mail->FromName = "Any Name";
     //$mail->AddReplyTo('xyz@domainname.com', 'any name'); 
