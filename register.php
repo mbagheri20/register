@@ -361,7 +361,7 @@ if($check["message"] != ""){
 $sent_successfully = false;
 
 if($try_send){
-  $official_sender = 'Hannu-Pekka Komsa <hannu-pekka.komsa@oulu.fi>';
+  //$official_sender = 'Hannu-Pekka Komsa <hannu-pekka.komsa@oulu.fi>';
   //$regmail_to = 'Adam Foster <mohammad.bagheri@oulu.fi>, Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>, Peter Spijker <mohammad.bagheri@oulu.fi>, Teemu Hynninen <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
   //$mail->isHTML(true);
@@ -526,7 +526,7 @@ Accommodation: '.$accommodation.'
 
   $confmail_contents .= "
 
-If you have not meant to register and have received this message by mistake, please contact ".$official_sender.'.
+If you have not meant to register and have received this message by mistake, please contact hannu-pekka.komsa@oulu.fi //".$official_sender.'.
 
 Best Regards,
 
