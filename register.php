@@ -527,7 +527,7 @@ Accommodation: '.$accommodation.'
 
   $confmail_contents .= "
 
-If you have not meant to register and have received this message by mistake, please contact hannu-pekka.komsa@oulu.fi //".$official_sender.'.
+If you have not meant to register and have received this message by mistake, please contact hannu-pekka.komsa@oulu.fi .
 
 Best Regards,
 
@@ -535,7 +535,7 @@ Physics Boat Workshop organizers
 --------------------------------
 Arkady Krasheninnikov
 Hannu-Pekka Komsa
-Harriet Åhlgren
+Harriet Ahlgren
 ';
 
   //$sent_confirm = mail($confmail_to,$confmail_title,$confmail_contents,$confmail_headers );
