@@ -28,8 +28,8 @@ try {
 
     //Recipients
     //$mail->Sender='mohammad.bagheri@oulu.fi';
-    $mail->setFrom('info@register-boat.rahtiapp.fi', 'Physics Boat');
-    $mail->addAddress('clashsave92@gmail.com', 'admin User');     //Add a recipient
+    $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat');
+    $mail->addAddress('clashsave92@gmail.com', 'User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
