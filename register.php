@@ -328,7 +328,7 @@ for ($i=1; $i < $n_refs+10; $i++){
 
 $page_contents = $html_header;
 
-$page_contents .= '<h1>Registration</h1>';
+$page_contents .= '<h1>Abstract submission/registration</h1>';
 
 $page_contents .= '<p class="instructions">';
 $page_contents .= 'Please register to the workshop <b>Physics boat 2024</b> by filling the form below. Make sure to fill in all the <b>required fields</b>, shown in bold text.';
@@ -640,7 +640,7 @@ if($sent_successfully){
 			      $accommodation,
 			      1);
 
-  $page_contents .= form_info("The accommodation cost depends on whether you share a cabin or not. You should also inform us if you plan to bring an accompanying person (or several) with you.");
+  $page_contents .= form_info("The accommodation cost depends on whether you share a cabin or not. You should also inform us if you plan to bring an accompanying person (or several) with you. Currently this is done to estimate how many cabins are required. You will need to pay for the cabin later on (the link will be sent to you after abstract acceptance).");
 
 
   if($accommodation == $shared){
