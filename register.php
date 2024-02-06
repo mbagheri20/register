@@ -335,7 +335,7 @@ $page_contents .= 'Please register to the workshop <b>Physics boat 2024</b> by f
 $page_contents .= '</p><br />';
 
 $page_contents .= '<p class="instructions">';
-$page_contents .= 'The deadline for registration is <b>2024-03-29, the 29th of March 2024</b>.';
+$page_contents .= 'The deadline for registration is <b>2024-03-22, the 22nd of March 2024</b>.';
 $page_contents .= '</p><br />';
 
 $page_contents .= '<p class="instructions">';
@@ -343,7 +343,7 @@ $page_contents .= 'Registration requires a submission of an abstract. The abstra
 $page_contents .= '</p><br />';
 
 $page_contents .= '<p class="instructions">';
-$page_contents .= 'Decision on the acceptance of your abstract will be sent by email by <b>2024-04-08</b>.';
+$page_contents .= 'Decision on the acceptance of your abstract will be sent by email by <b>2024-04-09</b>.';
 $page_contents .= '</p><br />';
 
 if($preview){
