@@ -29,7 +29,7 @@ try {
     //Recipients
     //$mail->Sender='mohammad.bagheri@oulu.fi';
     $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat');
-    $mail->addAddress('clashsave92@gmail.com', 'User');     //Add a recipient
+    $mail->addAddress('mohammad.bagheri@student.oulu.fi', 'User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
