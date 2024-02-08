@@ -41,12 +41,12 @@ try {
     //$mail->Priority = 1;
     //$mail->AddCustomHeader("X-MSMail-Priority: High");
     //$mail->WordWrap = 50; 
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Body =  html_entity_decode($Body);
+                                      //Set email format to HTML
+    //$mail->Body =  html_entity_decode($Body);
     $mail->Subject = 'first project report Nov';
     $mail->Body    = 'Hi, If you received this email, it means the PHP mail fixed!';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+    $mail->isHTML(true);
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
