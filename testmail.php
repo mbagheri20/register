@@ -29,7 +29,7 @@ try {
     //Recipients
     //$mail->Sender='mohammad.bagheri@oulu.fi';
     $mail->setFrom('mohammad.bagheri@oulu.fi', 'Physics Boat');
-    $mail->addAddress('mohammad.bagheri@student.oulu.fi', 'User');     //Add a recipient
+    $mail->addAddress('clashsave92@gmail.com', 'User');     //Add a recipient
     $mail->addReplyTo('mohammad.bagheri@oulu.fi', 'Information');
 
     //Content
@@ -41,7 +41,7 @@ try {
     //$mail->Priority = 1;
     //$mail->AddCustomHeader("X-MSMail-Priority: High");
     //$mail->WordWrap = 50; 
-    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->isHTML(false);                                  //Set email format to HTML
     $mail->Subject = 'first project report Nov';
     $mail->Body    = 'Hi, If you received this email, it means the PHP mail fixed!';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
