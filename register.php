@@ -526,7 +526,7 @@ Accommodation: '.$accommodation.'
 
   $confmail_contents .= "
 
-If you have not meant to register and have received this message by mistake, please contact ".$official_sender.'.
+If you have not meant to register and have received this message by mistake, please contact hannu-pekka.komsa(at)oulu.fi.
 
 Best Regards,
 
