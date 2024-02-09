@@ -561,7 +561,7 @@ if($sent_successfully){
 
 } else {
 
-  $page_contents .= '<form method="post" action="register.php">';
+  $page_contents .= '<form method="post" action="testmail.php">';
 
   $page_contents .= '<h2>Personal information</h2>';
   $page_contents .= "<table><tbody>";
