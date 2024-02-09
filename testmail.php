@@ -46,7 +46,7 @@ try {
     $mail->Subject = 'first project report Nov';
     $mail->Body    = ' <p><b>HTML Mail</b> Test</p> Hi, If you received this email, it means the PHP mail fixed!';
     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-    $mail->isHTML(true);
+    //$mail->isHTML(true);
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
