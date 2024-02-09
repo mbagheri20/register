@@ -372,7 +372,7 @@ if($try_send){
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
   //$mail->addBCC('hannu-pekka.komsa@oulu.fi','Physics Boat Workshop');
-  //$mail->addBCC('a.krasheninnikov@hzdr.de','abstract submission');
+  $mail->addBCC('a.krasheninnikov@hzdr.de','abstract submission');
   $mail->addAddress('hannu-pekka.komsa@oulu.fi', 'abstract submission');
 
   //$regmail_to = 'Physics Boat Workshop <hannu-pekka.komsa@oulu.fi>';
@@ -434,7 +434,7 @@ if($try_send){
 
   if($n_accs > 1){
     //$notemail_headers = 'From: '.$email;
-    $notemail_headers = 'From: Physics Boat site <mohammad.bagheri@oulu.fi>';
+    $notemail_headers = 'From: Physics Boat site <hannu-pekka.komsa@oulu.fi>';
     $notemail_title = '[Boat2024] Notification on '.$given_names.' '.$surname;
     $notemail_contents = 'Notice! '.$given_names.' '.$surname.' registered '.$n_accs.' accompanying people. Contact for details!';
 
@@ -526,7 +526,7 @@ Accommodation: '.$accommodation.'
 
   $confmail_contents .= "
 
-If you have not meant to register and have received this message by mistake, please contact hannu-pekka.komsa(at)oulu.fi.
+If you have not meant to register and have received this message by mistake, please contact ".$official_sender.'.
 
 Best Regards,
 
