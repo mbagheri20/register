@@ -364,7 +364,7 @@ if($try_send){
   //$official_sender = 'Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Adam Foster <mohammad.bagheri@oulu.fi>, Arkady Krasheninnikov <mohammad.bagheri@oulu.fi>, Peter Spijker <mohammad.bagheri@oulu.fi>, Teemu Hynninen <mohammad.bagheri@oulu.fi>';
   //$regmail_to = 'Peter Spijker <mohammad.bagheri@oulu.fi>';
-  $mail->isHTML(true);
+  //$mail->isHTML(true);
 	
   //$official_sender = 'Physics Boat site <@>';
   $mail->setFrom('hannu-pekka.komsa@oulu.fi', 'Physics Boat Workshop');
